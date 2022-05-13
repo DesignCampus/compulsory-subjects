@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*!
+ * File Info: HTMLとCSSの講座
+*/
+
+@layer reset, base, vendors;
+
+@import url(reset.css) layer(reset);
+@import url(base.css) layer(base);
+@import url(component.css) layer(component);

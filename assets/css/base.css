@@ -1,0 +1,612 @@
+
+/** ========================================
+ * @GENERAL
+ * 全般
+ * ====================================== */
+/** --------------------
+ * カスタムプロパティ（今回はメモに使用した）
+ * ------------------ */
+ :root {
+	--color-primaly: #1AB1C4;/*26, 175, 196*/
+	--color-secondly: #1D5175;
+	--color-accent:  #FF2E1E;/*255, 46, 30*/
+	--color-white: #fff;
+	--color-black: #707070;
+	--font-sans: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Arial", "Meiryo", sans-serif;
+	--font-serif: "Times New Roman", "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "MS PMincho", serif;
+}
+
+
+/** --------------------
+ * 全体
+ * ------------------ */
+body {
+	color: var(--color-black);
+	font-family: var(--font-sans);
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1;
+}
+body,
+body * {
+	box-sizing: border-box;
+}
+
+img {
+	height: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	a:hover {
+		opacity: .5;
+	}
+}
+
+/** ========================================
+ * @HEADER
+ * ヘッダー
+ * ====================================== */
+header {
+	z-index: 0;
+	position: relative;
+	width: 100%;
+	height: 480px;
+	background: #eee url(../images/hero_visual.jpg) center no-repeat;
+	background-image: image-set(url(../images/hero_visual-pc.jpg) 1x, url(../images/sample-hero_visual-pc@2x.jpg) 2x);
+	background-image: -webkit-image-set(url(../images/hero_visual-pc.jpg) 1x, url(../images/sample-hero_visual-pc@2x.jpg) 2x);
+	background-size: cover;
+	/* background-attachment: fixed; */
+	color: var(--color-white);
+	text-align: center;
+}
+@media screen and (max-width: 414px) {
+	header {
+		height: 400px;
+		background-image: image-set(url(../images/hero_visual-sp.jpg) 1x, url(../images/sample-hero_visual-sp@2x.jpg) 2x);
+		background-image: -webkit-image-set(url(../images/hero_visual-sp.jpg) 1x, url(../images/sample-hero_visual-sp@2x.jpg) 2x);
+	}
+}
+
+.headerText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: clamp(310px, calc(1052 / 1920 * 100%), 1052px);
+	padding: calc(61 / 16 * 1rem) 1rem calc(47 / 16 * 1rem);
+	background-color: rgb(255, 255, 255, .1);
+	backdrop-filter: blur(33px);
+	transform: translate(-50%, -50%);
+}
+
+.headerText h1 {
+	z-index: 1;
+	margin-top: 1rem;
+	font-family: var(--font-serif);
+	font-size: 3.5rem;
+	font-weight: 600;
+	font-weight: bold;
+}
+
+
+/** ========================================
+ * @
+ * 
+ * ====================================== */
+main {
+	margin: auto;
+}
+
+
+section:where(#results, #about, #strength, #contact) {
+	margin-top: 114px;
+}
+@media (max-width: 640px) {
+	section:where(#results, #about, #strength, #contact) {
+		margin-top: 47px;
+	}
+}
+
+.contents {
+	width: min(1280px, calc(85vw + 56px));
+	margin: auto;
+}
+
+
+.contents_heading {
+	width: fit-content;
+	margin: 0 auto 56px;
+	color: var(--color-primaly);
+	font-family: var(--font-serif);
+	font-size: 30px;
+	font-weight: 600;
+	word-break: keep-all;
+	line-break: strict;
+	overflow-wrap: break-word;
+}
+.contents_heading::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 4px;
+	margin: 18.5px auto 0;
+	background-color: var(--color-primaly);
+	border-radius: 4px;
+}
+@media (max-width: 640px) {
+	.contents_heading {
+		margin: 0 auto 30px;
+	}
+}
+
+
+
+
+
+/** ========================================
+ * @RESULTS
+ * 制作実績
+ * ====================================== */
+.results_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.results_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px 40px;
+	width: min(calc((320 / 375) *100vw), 1280px);
+	margin: auto;
+}
+.results_list li {
+	flex: 1 1 calc((100% - (40px * 2)) / 3);
+	/* flex: 0 0 clamp(100% / (3 + 1) + ((3 - 1) * 40px), (640px - 100vw) * 1000, (100% - 80px)); */
+}
+@media (max-width: 640px) {
+	.results_list {
+		gap: 20px;
+	}
+	.results_list li {
+		flex: 1 1 calc((100% - 40px) / 2);
+	}
+}
+
+/* #results .contents {
+	background-color: red;
+}
+
+:where(#results, #about) .contents {
+	background-color: blue;
+} */
+
+/** ========================================
+ * @ABOUT
+ * 私について
+ * ====================================== */
+#about {
+	background: url(../images/works_hero.jpg) center no-repeat;
+	background-size: cover;
+	background-color: rgba(255,255,255, .9);
+	background-blend-mode: screen;
+}
+
+#about .contents {
+	padding: 114px 0 120px;
+}
+@media (max-width: 640px) {
+	#about .contents {
+		padding: 47px 0 93px;
+
+	}
+}
+
+
+.profile {
+	overflow: auto;
+	width: min(calc((320 / 375) *100vw), 1280px);
+	margin: auto;
+}
+.profile_img {
+	float: left;
+	width: 360px;
+	margin-right: 20px;
+}
+.profile_txt {
+	margin-top: calc((((30 / 18) * 1em) - 1em) / 2 * -1);
+	font-size: 18px;
+	line-height: calc(30 / 18);
+}
+
+@media (max-width: 640px) {
+	.profile_img {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+	.profile_txt {
+		margin-top: calc(((((24 / 14) * 1em) - 1em) / 2 * -1) + 30px);
+		padding: 0 5px;
+		font-size: 14px;
+		line-height: calc(24 / 14);
+	}
+}
+
+
+/** ========================================
+ * @STRENGTH
+ * 強み
+ * ====================================== */
+.strengthCard {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	width: min(calc(100% - 44px), 1013px);
+	margin: auto;
+	/* margin: 0 134px; */
+	gap: 11px;
+}
+
+.strengthCard_item {
+	width: 100%;
+	border: solid 1px var(--color-black);
+}
+
+.strengthCard_item h3 {
+	padding: 17px;
+	border-bottom: dashed 1px var(--color-black);
+	text-align: center;
+}
+
+.strengthCard_item p {
+	padding: 20px 20px 47px;
+	line-height: calc(30 / 18);
+	margin-top: calc((((30 / 18) * 1em) - 1em) / 2 * -1);
+}
+
+
+/** ========================================
+ * @CONTACT
+ * お問い合わせ
+ * ====================================== */
+.contactForm {
+	width: min(calc(100% -44px), 1013px);
+	margin: auto;
+}
+
+.contactForm_inputField {
+	display: grid;
+	grid-template-columns: 1fr 800px;
+	grid-template-rows: 60px 60px auto;
+	gap: 30px 42px;
+}
+@media (max-width: 800px) {
+	.contactForm_inputField {
+		grid-template-columns: 1fr;
+		grid-template-rows: initial;
+		gap: 0;
+		width: max(calc((310 / 375) * 100vw), 310px);
+		margin: auto;
+	}
+}
+
+
+.contactForm_inputField :is(input, textarea) {
+	width: min(100%, 800px);
+	padding: 18px 42px;
+	background: var(--color-white);
+	border: 1px solid rgb(112, 112, 112, .2);
+	box-shadow: inset 0 1px 6px rgb(0, 0, 0, .12);
+	text-align: left;
+}
+@media (max-width: 640px) {
+	.contactForm_inputField :is(input, textarea) {
+		margin-top: 8px;
+		padding: 10px 14px;
+		border: 1px solid rgb(112, 112, 112, 1);
+		box-shadow: none;
+	}
+}
+
+.contactForm_inputField label {
+	text-align: right;
+	align-self: center;
+}
+@media (max-width: 800px) {
+	.contactForm_inputField label {
+		text-align: left;
+	}
+	.contactForm_inputField label:not(:nth-child(1)) {
+		margin-top: 15px;
+	}
+}
+
+
+
+.contactForm_inputField textarea {
+	height: max(110px, 60px);
+}
+
+.contactForm_inputField ::placeholder {
+	opacity: .5;
+}
+
+.contactForm button[type=submit] {
+	display: block;
+	width: fit-content;
+	margin: 64px auto 0;
+	padding: 16px 54px;
+	background: var(--color-primaly);
+	color: var(--color-white);
+	border: 1px solid var(--color-white);
+	border-radius: 2em;
+	box-shadow: 0 3px 6px rgb(0, 0, 0, .16);
+	font-family: var(--font-serif);
+	font-size: 21px;
+	text-align: center;
+	line-height: 1;
+	cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+	.contactForm button[type=submit]:hover {
+		box-shadow: inset 0 3px 6px rgb(0, 0, 0, .16);
+		transform: scale(.99);
+	}
+}
+@media (max-width: 640px) {
+	.contactForm button[type=submit] {
+		margin-top: 30px;
+		padding: 13px 39px;
+		font-size: 18px;
+	}
+}
+
+/* NGなら赤くする */
+.contactForm_inputField :is(input, textarea):focus {
+  border : rgb(26, 175, 196, .3) 2px solid;
+}
+.contactForm_inputField :is(input, textarea):focus:invalid {
+  background-color : rgb(255, 46, 30, .1);
+  border : rgb(255, 46, 30, .3) 2px solid;
+}
+.contactForm_inputField :is(input, textarea):-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/** ========================================
+ * @FOOTER
+ * フッター
+ * ====================================== */
+footer {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+	margin-top: 100px;
+	background-color: var(--color-primaly);
+	color: var(--color-white);
+}
+@media (max-width: 640px) {
+	footer {
+		height: 100px;
+		margin-top: 50px;
+	}
+}
+
+.backToTop {
+	display: none;
+}
+.backToTop.is-show {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	bottom: 30px;
+	right: 30px;
+	width: 120px;
+	height: 120px;
+	background: var(--color-white);
+	border-radius: 50%;
+	box-shadow: 0 3px 6px rgb(0, 0, 0, .16);
+	color: var(--color-black);
+	font-size: 20px;
+}
+.backToTop.is-show::before {
+	content: "";
+	display: inline-block;
+	width: 30px;
+	height: 31px;
+	background: url(../images/Icon-arrow-up.svg) no-repeat center center;
+	background-size: contain;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.backToTop.is-show:hover  {
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 640px) {
+	.backToTop.is-show {
+		gap: 4px;
+		right: 10px;
+		width: 52px;
+		height: 52px;
+		font-size: 8px;
+	}
+	.backToTop.is-show::before {
+		width: 13px;
+		height: 14px;
+	}
+}
+
+
+
+/** ========================================
+ * @MODAL
+ * モーダル
+ * ====================================== */
+/* .overlay[data-state=hidden] {
+	display: none;
+} */
+.overlay {
+	position: fixed;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(0, 0, 0, .8);
+}
+
+.modal[data-state=hidden] {
+	display: none;
+}
+.modal[data-state=visible] {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal_close {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	right: 0;
+	color: var(--color-white);
+	font-size: 21px;
+	transform: translateY(-150%);
+	gap: 10px;
+	cursor: pointer;
+}
+
+.modal_body {
+	overflow-y: auto;
+	display: flex;
+	width: min(80vw, 1280px);
+	height: clamp(80vh, 690px, calc(690 / 1080 * 100vh));
+	padding: 40px;
+	background-color: var(--color-white);
+}
+@media (max-width: 640px) {
+	.modal_body {
+		display: block;
+		width: max(calc(320 / 375 * 100vw), 320px);
+		padding: 20px;
+	}
+}
+
+.modal_body::-webkit-scrollbar {
+	width: 16px;
+}
+.modal_body::-webkit-scrollbar-track {
+	background: linear-gradient(#ddd 50%, #d7d7d7);
+}
+.modal_body::-webkit-scrollbar-thumb {
+	background: linear-gradient(-15deg, transparent, rgba(255,255,255, .2)), linear-gradient(to left, #aaa 25%, #a7a7a7 90%, #aaa);
+}
+
+
+.modal_img, .modal_txt {
+	flex: 1 1 50%;
+	height: max-content;
+}
+@media (max-width: 640px) {
+	.modal_img, .modal_txt {
+		width: 100%;
+	}
+}
+
+.img_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.img_list li {
+	flex: 0 0 calc((100% - (30px * 2)) / 3);
+}
+.img_list li:first-child {
+	flex: 1 1 100%;
+}
+.img_list img {
+	vertical-align: bottom;
+}
+@media (max-width: 640px) {
+	.img_list {
+		gap: 5px;
+	}
+	.img_list li {
+		flex: 0 0 calc((100% - (5px * 2)) / 3);
+	}
+}
+
+
+.modal_txt {
+	padding-left: 30px;
+	font-size: 20px;
+}
+.modal_txt h3 {
+	font-size: 30px;
+}
+.work_type {
+	margin-top: 12px;
+}
+.work_url {
+	display: inline-block;
+	margin-top: 13px;
+	text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+	.modal_txt {
+		margin-top: 20px;
+		padding-left: 0;
+		font-size: 14px;
+	}
+	.modal_txt h3 {
+		font-size: 18px;
+	}
+}
+
+
+
+.work_explain li:not(:last-child) {
+	margin-top: 13px;
+}
+.work_explain li:last-child {
+	margin-top: 32px;
+}
+
+.work_explain li:not(:last-child) span {
+	display: inline-block;
+}
+.work_explain li:last-child span {
+	display: block;
+}
+.work_explain li:not(:last-child) span::after {
+	content: "：";
+}
+
+.work_explain li:last-child p {
+	margin-top: 17px;
+	padding: 28px;
+	padding-top: calc(28px + ((((30 / 18) * 1em) - 1em) / 2 * -1));
+	border: 1px solid var(--color-black);
+	font-size: 18px;
+	line-height: calc(30 / 18);
+}
+
+@media (max-width: 640px) {
+	.work_explain li:last-child span {
+		font-size: 16px;
+	}
+	.work_explain li:last-child p {
+		margin-top: 10px;
+		padding: 18px;
+		padding-top: calc(18px + ((((24 / 14) * 1em) - 1em) / 2 * -1));
+		font-size: 14px;
+		line-height: calc(24 / 14);
+	}
+}
