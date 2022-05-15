@@ -1,9 +1,36 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // モーダルの表示
-    const openTriggers = document.querySelectorAll('.js-modal-open');
+    // 変数
+    const openTriggers = document.querySelectorAll('.js-modal-open'),
+        closeTrigger = document.querySelector('#js-modal-close'),
+        pagetopBtn = document.querySelector('#js-backToTop');
 
+    /**
+     * ページのトップに戻る
+     * 補足：() => {}は、function(){}のシンタックスシュガー（別の記法）のようなもの。詳細は講義にて
+     */
+    pagetopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    /**
+     * トップに戻るボタンの表示非表示
+     */
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            pagetopBtn.classList.add('is-show');
+        } else {
+            pagetopBtn.classList.remove('is-show');
+        }
+    });
+
+
+
+    // モーダル表示イベント
     // 基本
     for (var i = 0; i < openTriggers.length; i++) {
         openTriggers[i].addEventListener('click', function (e) {
@@ -11,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
             openModal();
         });
     }
-
     /**
      * 基本の繰り返しを今っぽく書くと
      */
@@ -22,6 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
     //     });
     // });
 
+    // モーダルを閉じるイベント
+    closeTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        closeModal();
+    });
+
+
+
+    /**
+     * モーダルウィンドウを開く処理
+     */
     function openModal() {
         const modal = document.querySelector('#js-modal');
         let elem = document.createElement("div");
@@ -29,41 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.before(elem);
         modal.dataset.state = 'visible';
     }
-    // モーダルの非表示
-    const closeTrigger = document.querySelector('#js-modal-close');
-    closeTrigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        closeModal();
-    });
 
+    /**
+     * モーダルウィンドウを閉じる処理
+     */
     function closeModal() {
         const modal = document.querySelector('#js-modal');
         const overlay = document.querySelector('.overlay');
         modal.dataset.state = 'hidden';
         overlay.remove();
     }
-        
 
-    /**
-     * ページのトップに戻る
-     */
-    const pagetopBtn = document.querySelector('#js-backToTop');
-    pagetopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    document.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            console.log('scrolled' + window.scrollY);
-            pagetopBtn.classList.add('is-show');
-        } else {
-            console.log('not scrolled' + window.scrollY);
-            pagetopBtn.classList.remove('is-show');
-        }
-    });
 
 
 });
