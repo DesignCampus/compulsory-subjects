@@ -1,34 +1,48 @@
 ---
 theme: "simple"
+customTheme : "my-theme"
 transition: "convex"
 slideNumber: false
 title: "コーディング 1w"
 ---
-<style>
-    /*data-pdf-page-number="0"*/
-    /* .reveal h2 {color: red;}
-    body.reveal-viewport {
-        background: red;
-    } */
-</style>
-<script>
-    // console.log("aaa");
-</script>
-# Part of Coding
-##  1st week
+
+# コーディング  ライブ授業
+##  1週目「HTML」
 <img src="./img/1w/logo_bg_none.png" style="width: 16%;">
 
 ---
 
-- 10:05～ ANY課題について
-- 10:10～ アイスブレイク
-- 10:25～ アイスブレイクの発表
-- 10:40～ 制作の心構え
-- 10:45～ HTMLの話
-- 11:05～ 構想してきたもの
-- 11:10～ こんな風に書いてほしい
-- 11:15～ 実習
-- 11:45～ 来週に向けて
+1. 自己紹介
+1. ANY課題について
+1. アイスブレイク
+1. 制作の心構え
+1. HTMLの話
+1. 構想してきたもの
+1. 教材について
+1. 実習
+1. 課題と来週の話
+
+note:
+10:00～ 自己紹介
+5
+10:05～ ANY課題について
+5
+10:10～ アイスブレイク
+10
+10:20～ アイスブレイクの発表
+10
+10:30～ 制作の心構え
+5
+10:35～ HTMLの話
+10
+5休憩
+10:50～ 構想してきたもの
+10
+11:00～ 教材について
+15
+11:15～ 実習
+30
+11:45～ 課題と来週の話
 
 ---
 
@@ -41,21 +55,21 @@ title: "コーディング 1w"
 ---
 
 ### 目玉焼きを美味しく焼き上げて！
+<p><img src="./img/1w/medama.jpeg" style="width: 50%;"></p>
 
 ---
 
-<p><img src="./img/1w/medama.jpeg" style="width: 50%;"></p>
-
+- 新しいHTMLファイルを作って
 - 使っていいHTMLの要素は**3つまで**
 - CSSはHTMLファイルに直書き
 - 美味しそうになるように ← これ大事
 
-<p style="font-size: 1.6em;">10:25まで</p>
+<p style="font-size: 1.6em;">10:20 まで</p>
 
 ---
 
 - 美味しそうなポイントは
-- どんな工程で作ったか
+- どんな流れで作ったか
 - 苦労した点
 
 ---
@@ -64,10 +78,13 @@ title: "コーディング 1w"
 
 ---
 
-- カンプを見て作業前にHTML、CSSを考える（JSもね） ← これができないと質問できない
+- カンプや仕様書を見て作業前にHTML、CSSを考える（JSもね）
+- 動作の確認・デバッグは怠らない
 - 技術に関して、基本的にわからないことはググる、自分で調べる
+
+note:
+ ← これができないと質問できない
 Copilotデモ
-- 対象ブラウザが何かは絶対確認
 
 ---
 
@@ -85,7 +102,11 @@ https://developer.mozilla.org/ja/docs/Web
 
 ---
 
-### HTMとは何か
+### HTMLとは何か
+
+---
+
+文章に意味づけをする
 
 ---
 
@@ -94,6 +115,8 @@ https://developer.mozilla.org/ja/docs/Web
 ---
 
 ### LINT
+
+構文チェックをしよう
 
 #### W3C Markup Validation Service
 https://validator.w3.org/
@@ -104,12 +127,74 @@ https://validator.w3.org/
 
 ---
 
-11:05 構想してきたもの
-といってもむずかしいかもしれないけども
+### HTMLとCSS、考えられた？
 
 ---
 
-## こんな風に書いてほしい
+## 教材について
+
+---
+
+### PC or SP
+
+---
+
+### headタグ
+
+---
+
+### 命名
+
+---
+
+### h1タグ
+
+---
+
+### 各sectionについて
+
+---
+
+### imgタグ
+
+- サイズ
+- alt
+- loading属性とdecoding属性
+
+---
+
+### form
+
+---
+
+いろいろな部品があります
+
+---
+
+#### formタグ
+- action … データの送信先
+- Method … どんな方法で
+    * GET：データ頂戴
+    * POST：このデータ見て処理をして
+
+---
+
+#### 他にも便利な機能がある
+
+- placeholder
+- バリデーション
+    * required
+    * pattern
+
+---
+
+### モーダルウィンドウ
+
+---
+
+- data属性
+- 閉じるボタンはどう作る？
+- timeタグ
 
 ---
 
@@ -117,7 +202,25 @@ https://validator.w3.org/
 
 ---
 
+<p style="font-size: 1.6em;">11:45 まで</p>
+
+---
+
 ## 来週に向けて
+
+---
+
+### 課題
+
+HTMLを完成させる！
+<p style="font-size: .8em;">※どうしてもだめなら教材のソースを使ってください</p>
+
+---
+
+### 予告
+
+次週、CSS回は伝えたいことがたくさんある  
+🍳とか作ってる暇がない…orz
 
 ---
 

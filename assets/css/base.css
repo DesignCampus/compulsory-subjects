@@ -19,6 +19,9 @@
 /** --------------------
  * 全体
  * ------------------ */
+html {
+	scroll-behavior: smooth;
+}
 body {
 	color: var(--color-black);
 	font-family: var(--font-sans);

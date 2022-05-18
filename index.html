@@ -42,7 +42,7 @@
 
 </head>
 
-<body id="body">
+<body>
 	<!-- ヘッダー：中央寄せ,blur -->
 	<header>
 		<div class="headerText">
@@ -57,12 +57,12 @@
 			<div class="contents">
 				<h2 class="contents_heading">制作実績</h2>
 				<ul class="results_list">
-					<li><a href="/" class="js-modal-open" aria-label="制作実績1"><img src="./assets/images/results-01.png" width="400" height="240" alt="制作実績1"></a></li>
-					<li><a href="/" class="js-modal-open" aria-label="制作実績2"><img src="./assets/images/results-02.png" width="400" height="240" alt="制作実績"></a></li>
-					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-03.png" width="400" height="240" alt="制作実績"></a></li>
-					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-04.png" width="400" height="240" alt="制作実績"></a></li>
-					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-05.png" width="400" height="240" alt="制作実績"></a></li>
-					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-06.png" width="400" height="240" alt="制作実績"></a></li>
+					<li><a href="/" class="js-modal-open" aria-label="制作実績1"><img src="./assets/images/results-01.png" width="400" height="240" alt="制作実績1" decoding="async"></a></li>
+					<li><a href="/" class="js-modal-open" aria-label="制作実績2"><img src="./assets/images/results-02.png" width="400" height="240" alt="制作実績" decoding="async"></a></li>
+					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-03.png" width="400" height="240" alt="制作実績" decoding="async"></a></li>
+					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-04.png" width="400" height="240" alt="制作実績" decoding="async"></a></li>
+					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-05.png" width="400" height="240" alt="制作実績" decoding="async"></a></li>
+					<li><a href="/" class="js-modal-open" aria-label="制作実績"><img src="./assets/images/results-06.png" width="400" height="240" alt="制作実績" decoding="async"></a></li>
 				</ul>
 			</div>
 		</section>
@@ -72,13 +72,12 @@
 				<h2 class="contents_heading">私について</h2>
 				<div class="profile">
 					<div class="profile_img">
-						<img src="./assets/images/about-01.jpg" width="720" height="500" alt="">
+						<img src="./assets/images/about-01.jpg" width="720" height="500" alt="" loading="lazy">
 					</div>
 					<p class="profile_txt">
 						親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）理由でもない。
 					</p>
 				</div>
-
 			</div>
 		</section>
 		<!-- 私の強み：grid -->
@@ -106,12 +105,12 @@
 			<div class="contents">
 				<h2 class="contents_heading">お問い合わせ</h2>
 				<div class="contactForm">
-					<form action="/" method="post">
+					<form action="/" method="POST">
 						<div class="contactForm_inputField">
-							<label for="name">お名前</label><input type="text" id="name" placeholder="お名前を入力してください" required>
-							<label for="email">メールアドレス</label><input type="email" id="email" placeholder="メールアドレスを入力"
+							<label for="name">お名前</label><input type="text" name="お名前" id="name" placeholder="お名前を入力してください" required>
+							<label for="email">メールアドレス</label><input type="email" name="メールアドレス" id="email" placeholder="メールアドレスを入力"
 								pattern=".+\.[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]" required>
-							<label for="msg">お問い合わせ内容</label><textarea name="message" id="msg" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください"
+							<label for="msg">お問い合わせ内容</label><textarea name="内容" id="msg" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください"
 								required></textarea>
 						</div>
 						<button type="submit">入力内容を送信</button>
@@ -144,13 +143,13 @@
 		<div class="modal_body">
 			<div class="modal_img">
 				<ul class="img_list">
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
-					<li><img src="./assets/images/modal-01.png" alt=""></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
+					<li><img src="./assets/images/modal-01.png" width="1200" height="720" alt="" loading="lazy"></li>
 				</ul>
 			</div><!-- /.modal_img -->
 			<div class="modal_txt">
