@@ -39,7 +39,7 @@ note:
 
 ## 講師の自己紹介
 
----
+--
 
 ### 小泉 誠 
 - Webデザイナー・UI/UXデザイナー
@@ -48,7 +48,7 @@ note:
 
 <img src="./img/1w/staff_koizumi.jpg" alt="koizumi">  
 
----
+--
 
 <div style="text-align:left">
 「Studio FireColor」という屋号で、フリーランスとして活動中。ウェブ制作会社、システム会社、SEO系の会社などで10年 以上の経験をつみ独⽴。<br>
@@ -60,21 +60,21 @@ Webデザイナーに始まりフロントエンド全般、SEO、 マーケテ�
 現在は「本⼈も職種がわからない…」といった感じで、 ゼネラリスト道を邁進中。
 </div>
 
----
+--
 
 - 代理店経由で大手企業の仕事が5割
 - 元請で中小企業中心に5割
 
----
+--
 
 <img src="./img/1w/image01.png">
 
----
+--
 
 ### activities
 IT分野での活動
 
----
+--
 
 <img src="./img/1w/image02.png">  
 
@@ -91,21 +91,21 @@ IT分野での活動
 
 ## アイスブレイク
 
----
+--
 
-### 目玉焼きを美味しく焼き上げて！
+### 目玉焼きを美味しく焼こう！
 <p><img src="./img/1w/medama.jpeg" style="width: 50%;"></p>
 
----
+--
 
 - 新しいHTMLファイルを作って
 - 使っていいHTMLの要素は**3つまで**
 - CSSはHTMLファイルに直書き
 - 美味しそうになるように ← これ大事
 
-<p style="font-size: 1.6em;">10:20 まで</p>
+<span class="fragment" style="font-size: 1.6em;">10:20 まで</span>
 
----
+--
 
 - 美味しそうなポイントは
 - どんな流れで作ったか
@@ -115,7 +115,7 @@ IT分野での活動
 
 ## 制作の心構え
 
----
+--
 
 - カンプや仕様書を見て作業前にHTML、CSSを考える（JSもね）
 - 動作の確認・デバッグは怠らない
@@ -125,7 +125,7 @@ note:
  ← これができないと質問できない
 Copilotデモ
 
----
+--
 
 ### このサイトだけは覚えておこう
 
@@ -139,19 +139,19 @@ https://developer.mozilla.org/ja/docs/Web
 
 ## HTMLの話
 
----
+--
 
 ### HTMLとは何か
 
----
+--
 
 文章に意味づけをする
 
----
+--
 
 ### アウトラインを理解する
 
----
+--
 
 ### LINT
 
@@ -164,7 +164,7 @@ https://validator.w3.org/
 
 ## 先週の宿題
 
----
+--
 
 ### HTMLとCSS、考えられた？
 
@@ -172,27 +172,27 @@ https://validator.w3.org/
 
 ## 教材について
 
----
+--
 
 ### PC or SP
 
----
+--
 
 ### headタグ
 
----
+--
 
 ### 命名
 
----
+--
 
 ### h1タグ
 
----
+--
 
 ### 各sectionについて
 
----
+--
 
 ### imgタグ
 
@@ -200,15 +200,15 @@ https://validator.w3.org/
 - alt
 - loading属性とdecoding属性
 
----
+--
 
 ### form
 
----
+--
 
 いろいろな部品があります
 
----
+--
 
 #### formタグ
 - action … データの送信先
@@ -216,7 +216,7 @@ https://validator.w3.org/
     * GET：データ頂戴
     * POST：このデータ見て処理をして
 
----
+--
 
 #### 他にも便利な機能がある
 
@@ -225,11 +225,11 @@ https://validator.w3.org/
     * required
     * pattern
 
----
+--
 
 ### モーダルウィンドウ
 
----
+--
 
 - data属性
 - 閉じるボタンはどう作る？
@@ -239,22 +239,23 @@ https://validator.w3.org/
 
 ## 実習
 
----
+--
 
-<p style="font-size: 1.6em;">11:45 まで</p>
+[Fade]
+<span style="font-size: 1.6em;">11:45 まで</span>
 
 ---
 
 ## 来週に向けて
 
----
+--
 
 ### 課題
 
 HTMLを完成させる！
 <p style="font-size: .8em;">※どうしてもだめなら教材のソースを使ってください</p>
 
----
+--
 
 ### 予告
 

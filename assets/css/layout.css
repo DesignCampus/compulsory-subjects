@@ -117,7 +117,7 @@ section:where(#results, #about, #strength, #contact) {
 	margin-right: 20px;
 }
 
-/* line-height */
+
 .profile_txt {
 	margin-top: calc((((30 / 18) * 1em) - 1em) / 2 * -1);
 	font-size: 18px;
