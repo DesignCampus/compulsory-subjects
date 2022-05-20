@@ -3,10 +3,10 @@
  * File Info: コーディング教材
 */
 
-@layer reset, base, layout, component;
+@layer reset, common, layout, component;
 
 @import url(reset.css) layer(reset);
-@import url(base.css) layer(base);
+@import url(common.css) layer(common);
 @import url(layout.css) layer(layout);
 @import url(component.css) layer(component);
 

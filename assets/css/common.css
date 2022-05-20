@@ -39,6 +39,7 @@ img {
 	height: auto;
 }
 
+/* hoverに対応してるか */
 @media (hover: hover) and (pointer: fine) {
 	a:hover {
 		opacity: .5;

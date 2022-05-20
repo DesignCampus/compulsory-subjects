@@ -16,12 +16,13 @@ section:where(#results, #about, #strength, #contact) {
 	}
 }
 
+/* min、calc */
 .contents {
-	width: min(1280px, calc(85vw + 56px));
+	width: min(calc(85vw + 56px), 1280px);
 	margin: auto;
 }
 
-
+/* width: fit-content */
 .contents_heading {
 	width: fit-content;
 	margin: 0 auto 56px;
@@ -116,6 +117,7 @@ section:where(#results, #about, #strength, #contact) {
 	margin-right: 20px;
 }
 
+/* line-height */
 .profile_txt {
 	margin-top: calc((((30 / 18) * 1em) - 1em) / 2 * -1);
 	font-size: 18px;
