@@ -22,35 +22,6 @@ section:where(#results, #about, #strength, #contact) {
 	margin: auto;
 }
 
-/* width: fit-content */
-.contents_heading {
-	width: fit-content;
-	margin: 0 auto 56px;
-	color: var(--color-primaly);
-	font-family: var(--font-serif);
-	font-size: 30px;
-	font-weight: 600;
-	word-break: keep-all;
-	line-break: strict;
-	overflow-wrap: break-word;
-}
-.contents_heading::after {
-	content: "";
-	display: block;
-	width: 60px;
-	height: 4px;
-	margin: 18.5px auto 0;
-	background-color: var(--color-primaly);
-	border-radius: 4px;
-}
-@media (max-width: 640px) {
-	.contents_heading {
-		margin: 0 auto 30px;
-	}
-}
-
-
-
 
 
 /** ========================================
@@ -299,14 +270,26 @@ section:where(#results, #about, #strength, #contact) {
 	}
 }
 
-/* NGなら赤くする */
+
+/* 要素にフォーカスがあるときに、赤くする */
 .contactForm_inputField :is(input, textarea):focus {
-  border : rgb(26, 175, 196, .3) 2px solid;
+	border : rgb(26, 175, 196, .3) 2px solid;
 }
+/* 要素にフォーカスがあるって入力があってるときの表示（こうすることで必然的に上の赤いときがエラーの時になる） */
 .contactForm_inputField :is(input, textarea):focus:invalid {
-  background-color : rgb(255, 46, 30, .1);
-  border : rgb(255, 46, 30, .3) 2px solid;
+	background-color : rgb(255, 46, 30, .1);
+	border : rgb(255, 46, 30, .3) 2px solid;
 }
+/* Google Chromeで入力補完機能を使うと色が変わってしまう対策 */
 .contactForm_inputField :is(input, textarea):-webkit-autofill {
-    transition: background-color 5000s ease-in-out 0s !important;
+	/* box-shadow: inset 0 1px 6px rgb(0 0 0 / 12%), 0 0 0px 1000px var(--color-white) inset; */
+	transition: background-color 10000s ease-in-out 0s !important;
 }
+
+/** ========================================
+ * 補足
+ * :focus-withinも便利
+ * ====================================== */
+/* form:focus-within {
+    background: red;
+} */

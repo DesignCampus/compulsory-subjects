@@ -61,6 +61,38 @@ header {
 } */
 
 
+/** ========================================
+ * @HEADINGS
+ * 見出し
+ * ====================================== */
+/* width: fit-content */
+.contents_heading {
+	width: fit-content;
+	margin: 0 auto 56px;
+	color: var(--color-primaly);
+	font-family: var(--font-serif);
+	font-size: 30px;
+	font-weight: 600;
+	word-break: keep-all;
+	line-break: strict;
+	overflow-wrap: break-word;
+}
+.contents_heading::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 4px;
+	margin: 18.5px auto 0;
+	background-color: var(--color-primaly);
+	border-radius: 4px;
+}
+@media (max-width: 640px) {
+	.contents_heading {
+		margin: 0 auto 30px;
+	}
+}
+
+
 
 
 /** ========================================

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>上下左右の中央寄せ</title>
+	<style>
+		*:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)){all:unset;display:revert}*,*::before,*::after{box-sizing:border-box}a,button{cursor:revert}ol,ul,menu{list-style:none}img{max-width:100%}table{border-collapse:collapse}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space}:where([draggable="true"]){-webkit-user-drag:element}
+	</style>
+	<style>
+		body {
+			padding: 24px;
+		}
+		section + section {
+			margin-top: 64px;
+		}
+		h1 {
+			width: fit-content;
+			font-size: 2rem;
+			margin-bottom: 16px;
+			border-bottom: 4px solid red;
+			border-image: linear-gradient(to right, transparent 10%, red 10%, red 90%, transparent 90%);
+			border-image-slice: 1;
+		}
+		h2 { font-size: 1.5rem; margin-bottom: 8px; }
+		* + h2 {
+			margin-top: 16px;
+		} 
+		.notes {
+			margin-top: 24px;
+		}
+
+		/* -------- 共通 -------- */
+		.parent {
+			width: 80vw;
+			height: 40vw;
+			background: #aaa;
+		}
+		.child {
+			width: 40vw;
+			height: 20vw;
+			background: #faa;
+		}
+
+		/* -------- Position -------- */
+		#position .parent {
+			position: relative;
+		}
+		#position .child {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		/* -------- Grid -------- */
+		#grid .parent {
+			display: grid;
+			place-items: center;
+			/* justify-items: center;
+			align-items: center; */
+		}
+
+		/* -------- Flex -------- */
+		#flex .parent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* -------- Table -------- */
+		#table .parent {
+			display: table;
+		}
+		#table .child {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+
+
+</style>
+</head>
+
+<body>
+	<h1>上下左右の中央寄せ</h1>
+	<section id="position">
+		<h2>position</h2>
+		<div class="parent">
+			<div class="child">ポジション</div>
+		</div>
+	</section>
+
+	<section id="grid">
+		<h2>grid</h2>
+		<div class="parent">
+			<div class="child">グリッド</div>
+		</div>
+	</section>
+
+	<section id="flex">
+		<h2>flex</h2>
+		<div class="parent">
+			<div class="child">フレックス</div>
+		</div>
+	</section>
+
+	<section id="table">
+		<h2>table</h2>
+		<div class="parent">
+			<div class="child">テーブル</div>
+		</div>
+	</section>
+
+	<p class="notes">※他にも様々な方法が考えられるが、とりあえずこれを知っていれば大体何とかなる</p>
+
+</body>
+
+</html>

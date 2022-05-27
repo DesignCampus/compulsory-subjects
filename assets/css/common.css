@@ -5,7 +5,7 @@
 /** --------------------
  * カスタムプロパティ
  * ------------------ */
- :root {
+:root {
 	--color-primaly: #1AB1C4;/*26, 175, 196*/
 	--color-secondly: #1D5175;
 	--color-accent:  #FF2E1E;/*255, 46, 30*/
@@ -56,9 +56,11 @@ img {
 /* body main {
 	background-color: red;
 }
-:where(body) main {
-	background-color: blue;
-}
+
 :is(body) main {
 	background-color: green;
+}
+
+:where(body) main {
+	background-color: blue;
 } */

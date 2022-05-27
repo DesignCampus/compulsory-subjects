@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /**
      * ページのトップに戻る
-     * 補足：() => {}は、function(){}のシンタックスシュガー（別の記法）のようなもの。詳細は講義にて
+     * 補足：() => {}は、function(){}のシンタックスシュガー（別の記法）のようなもの。詳細は後期講義にて
      */
     pagetopBtn.addEventListener('click', () => {
         window.scrollTo({
