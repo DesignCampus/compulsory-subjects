@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
 
     // 変数
     const openTriggers = document.querySelectorAll('.js-modal-open'),
@@ -12,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
      */
     pagetopBtn.addEventListener('click', () => {
         window.scrollTo({
-            top: 0
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // モーダル表示イベント
     // 基本
     for (var i = 0; i < openTriggers.length; i++) {
-        openTriggers[i].addEventListener('click', function (e) {
+        openTriggers[i].addEventListener('click', function(e) {
             e.preventDefault();
             openModal();
         });
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function openModal() {
         const modal = document.querySelector('#js-modal');
         let elem = document.createElement("div");
-        elem.classList.add("overlay", "js-modal-close");
+        elem.classList.add("overlay");
         modal.before(elem);
         modal.dataset.state = 'visible';
     }

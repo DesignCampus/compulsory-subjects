@@ -20,7 +20,7 @@
  * 全体
  * ------------------ */
 html {
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 }
 body {
 	color: var(--color-black);
